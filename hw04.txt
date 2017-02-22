@@ -1,0 +1,40 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. cpeek contents
+#!/bin/bash
+
+date >> bashlog
+ps aux | grep bash | grep -v cpeek >> bashlog 
+
+2. clock contents
+#!/bin/bash
+
+if [ -d $1 ]; then
+        ls $1 -pl | grep -v "/" | grep -e "-x" -e "wx"
+else
+        echo "Sorry"
+fi
+
+3. /dev/root -> sda2, /dev/sdb1, /dev/sdc1
+
+4. 373G
+
+5. ext4, read/write
+
+6. $ du -csh --block-size=1M .                                                           
+67      .
+67      total
+
+7. /dev/sda2        /                ext4        defaults         1   1
+
+8. ~# dumpe2fs /dev/sda2
+Filesystem state:         not clean
+Block size:               4096
+Group 1073: (Blocks 35160064-35165439)
+
+9. fdisk -l /dev/sda -c=dos -u=cylinders
+
+Partition1: /dev/sda1, Starting Cylinder: 1, Ending Cylinder: 1946, Partition Type: Linux swap
+Partition 2: /dev/sda2, Starting Cylinder: 1946, Ending Cylinder: 19458, Partition Type: Linux

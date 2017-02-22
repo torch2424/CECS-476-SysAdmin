@@ -1,0 +1,45 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+cheetah.cecs.csulb.edu
+
+1. It has been 24 days since reboot
+2. 18 users are currently logged in
+3. Short term load: 0.17, Medium term load: 0.08, Long term load: 0.06
+4. User mode: 0.2%, System mode: 0.2%, Idle: 98.8% 
+5. Memory in use: 1978708k, Idle memory: 25568k
+
+6. 3 Proccess with largest resident set size (RSS)
+
+/usr/sbin/named, -bash, and -bash
+
+Command Output:
+$ ps aux --sort -rss | head                                                           
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     16815  0.0  1.1 159176 24024 ?        Ssl  Jan22   0:28 /usr/sbin/named
+csa476x1 24151  0.0  0.2  16780  4948 pts/12   Ss   17:20   0:00 -bash
+csa476x1 24586  0.0  0.2  16780  4932 pts/17   Ss   17:30   0:00 -bash
+
+7. 6 'agetty' processes are running
+8. rpciod, /sbin/rpc.portmap, /sbin/rpc.statd
+9. inetd, Resident Set Size(RSS): 656KB, Virtual Memory Size(VSZ): 6300KB
+10. Lab37 does have a swap file, it's partition is /dev/sda1
+
+11. 
+a. Memory available: 1685540k
+b. Memory in use: 318124k
+c. Memory in buffers: 27292k
+d. Swap Space available: 15628112k
+e. Swap Space in use: 0k
+
+12. I created a 4MB swapfile in /swapfile with the following commands:
+root@lab37:~# dd if=/dev/zero of=/swapfile bs=1024 count=4096
+root@lab37:~# mkswap /swapfile
+root@lab37:~# swapon /swapfile
+
+13. Swap space before turning on /swapfile
+0k used, 15628112k free
+Swap space after turning on /swapfile
+0k used, 15632204k free
+
+14. 

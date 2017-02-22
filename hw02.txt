@@ -1,0 +1,35 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. 100
+
+2. 30
+
+3. /net/aardvark/u1/volper
+
+4. /bin/csh
+
+5. faculty
+
+6. mail dialout users
+
+7. guest: 60, cecsu: 71,cecsg: 72
+
+8. csa476x1@lab66:~$ cat /etc/shadow
+root:$1$dUcNWzrC$KPJh44PuG8R5TEFdgCxKW/:17189:0:::::
+
+9. January 22nd, 2017
+
+10. passwd -S
+
+11. Marking the shadow file readable is a bad decision as it would allow any malicious user to run rainbow attacks on people's hashed passwords in the shadow file to find they're actual password
+
+12. 6 aliaes
+
+13. 9 paths
+
+14. alias p='ps aux'
+
+15. csa476x1@lab66:~$ hello
+Hello

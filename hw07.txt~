@@ -1,0 +1,14 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. Uncomment the line: "#s1:12345:respawn:/sbin/agetty -L ttyS0 9600 vt100"
+
+2. Commenting the line:  "ca::ctrlaltdel:/sbin/shutdown -t5 -r -now" will disable
+the CtrlAltDel shutdown
+
+3. init waits 5 seconds
+
+4. */1 * * * * ls >> ~/tmp
+
+

@@ -1,0 +1,70 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+
+1a. With fdisk I ran the fdisk command with `fdisk -l`, 
+and then launched fdisk on sdb by using the command `fdisk /dev/sdb`.
+Afterwards in the shell, I ran `m` to list commands, 
+`d` to delete the partitions on sdb, `n` to add new partitions,
+`t` to change the first partition to swap, and `w` to exit and save changes.
+
+#####################################
+# fdisk partition table:
+####################################
+root@lab37:~# fdisk -l      
+
+Disk /dev/sda: 160.0 GB, 160041885696 bytes
+255 heads, 63 sectors/track, 19457 cylinders, total 312581808 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0xca18cb17
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1            2048    31258280    15628116+  82  Linux swap
+/dev/sda2        31258281   312581807   140661763+  83  Linux
+
+Disk /dev/sdb: 4311 MB, 4311982080 bytes
+255 heads, 63 sectors/track, 524 cylinders, total 8421840 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0xc118de50
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1            2048      841979      419966   82  Linux swap
+/dev/sdb2          841980     8421839     3789930   83  Linux
+
+
+1b. mount -t ext2 /dev/sdb2 /newdisk
+root@lab37:~# df -h                           
+Filesystem          Size  Used Avail Use% Mounted on
+/dev/root           133G  3.7G  122G   3% /
+tmpfs               979M     0  979M   0% /dev/shm
+134.139.248.17:/u3  459G   26G  410G   6% /net/ceetah/u3
+134.139.248.17:/u4  459G  141G  296G  33% /net/cheetah/u4
+/dev/sdb2           3.6G  7.3M  3.4G   1% /newdisk
+
+
+2. /dev/sdb2        /newdisk         ext2        defaults         0   2
+
+
+3. fstab line 
+
+/dev/sdc1        /mnt/extdisk     auto        auto,user,rw,exec   0   0
+
+mount command: bob@lab37:/mnt$ mount /mnt/extdisk
+
+
+4. root@lab37:~# fsck /dev/sdc1 -f
+fsck from util-linux 2.19
+e2fsck 1.41.14 (22-Dec-2010)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure                                           
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/sdc1: 11/62744 files (0.0% non-contiguous), 9984/250880 blocks  
+
+In Summary, this command checks the health of the drive, in how the inodes and blocks are correctly linking and being used by one another.

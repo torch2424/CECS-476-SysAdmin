@@ -1,0 +1,10 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. Feb 21 18:38
+
+2. #4 SMP Tue Feb 21 18:39:38 PST 2017
+
+3. My kernel: 5.6M, or 5864096
+Stock Kernel: 5.6M, or 5866144 

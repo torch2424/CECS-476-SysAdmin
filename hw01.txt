@@ -1,0 +1,25 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. 73, nl /etc/passwd
+2. inetd.conf, /etc/inetd.con, man inetd
+3. df, /bin/df, whereis df
+4. /etc/X11/xorg.conf-vesa
+
+5. $ ls /usr/lib64/*Xfontcache*
+/usr/lib64/libXfontcache.la  /usr/lib64/libXfontcache.so.1
+/usr/lib64/libXfontcache.so  /usr/lib64/libXfontcache.so.1.0.0
+
+6. $ cat cpuinfo
+cpu MHz         : 2992.308
+
+7. $ ls -tl
+-rw-r--r-- 1 root root     7387193 Jan 26 17:48 messages
+-rw-rw-r-- 1 root utmp     3359232 Jan 26 17:48 wtmp
+-rw-r--r-- 1 root root    79048102 Jan 26 17:47 syslog
+
+8. $ tail messages -n 3
+Jan 26 17:47:57 jaguar sshd[7038]: Received disconnect from 134.139.248.17: 11: disconnected by user
+Jan 26 17:48:05 jaguar sshd[6737]: Received disconnect from 134.139.248.33: 11: disconnected by user
+Jan 26 17:48:12 jaguar sshd[6685]: Received disconnect from 134.139.248.49: 11: disconnected by user

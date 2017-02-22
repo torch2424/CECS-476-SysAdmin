@@ -1,0 +1,40 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. Created Bob and sue in psswd and shadow files
+
+sudo vim /etc/passwd
+sudo vim /etc/shadow
+
+# Example input
+# bob:x:13101:71:Homework Assignment 3 User:/home/bob:/bin/bash
+# sue:x:13192:72:Homework Assignement 3 User:/home/sue:/bin/bash
+
+2. Set passwds for sue and bob
+
+passwd bob
+passwd sue
+
+3. Made Home Directories for sue and bob
+
+cd /home
+mkdir bob
+mkdir sue
+
+4. Created the neccessary files for bob, and copied to sue
+
+vim .bash_profile
+vim .login
+vim demo
+
+cp .bash_profile ../sue/
+cp .login ../sue/
+cp demo ../sue/
+
+5. Edited Permissions for bob and sue's home directories
+
+chmod 755 -R bob/
+chmod 755 -R sue/
+chown -R bob.cecsu bob/
+chown -R sue.cecsg sue/
