@@ -1,0 +1,39 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. Option "DontZap"
+
+2a. 21 different mouse protocols
+2b. It would use the protocol PS/2
+2c. fvwm2, F window manager
+
+3a. /dev/input/mouse0
+3b. Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz)
+3c. Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz)
+
+4. /dev/input/mouse0, USB Optical Mouse
+
+5a. fvwm2
+5b. 3 winodws are displayed when x starts
+5c. "F1", Line 114
+
+6a. The name of the file is /hom/bob/.fvwm2rc
+
+AddToFunc StartFunction
++ I Exec exec xterm -fn 6x10 -geometry 80x24+0+0
++ I Exec exec xterm -fn 6x10 -geometry 80x24-0-0
++ I Exec exec xsetroot -solid yellow
+
+6b. I created the file /home/bob/.xinitrc and add the following:
+
+if [ -z "$DESKTOP_SESSION" -a -x /usr/bin/ck-launch-session ]; then
+  ck-launch-session twm
+else
+  twm
+fi
+
+7a. HDisplay = 1280, VDisplay = 1024
+7b. Vertical Sync (Hz): 60.02
+
+ 
