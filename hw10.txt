@@ -2,4 +2,41 @@ Aaron Turner
 csa476x1
 lab37.net.cecs.csulb.edu
 
+1.
+mount /dev/sdc1 /media/usbdrive
+tar -cf /media/usbdrive/bobBackup /home/bob --absolute-names
+tar -tf /mdeia/usbdrive/bobbackup
 
+2.
+Command Used: tar -xf ~djv/giant.tgz
+
+giant Directory:
+
+root@lab37:~/giant# ls -la
+total 20
+drwxr-xr-x 5 djv  faculty 4096 Feb 23  1998 ./
+drwx--x--- 4 root root    4096 Feb 28 18:05 ../
+drwxr-xr-x 2 djv  faculty 4096 Feb 23  1998 fee/
+drwxr-xr-x 2 djv  faculty 4096 Feb 23  1998 fie/
+drwxr-xr-x 2 djv  faculty 4096 Feb 23  1998 foe/
+
+fee Directory:
+root@lab37:~/giant/fee# ls -la
+total 12
+drwxr-xr-x 2 djv faculty 4096 Feb 23  1998 ./
+drwxr-xr-x 5 djv faculty 4096 Feb 23  1998 ../
+-rw-r--r-- 1 djv faculty   10 Feb 23  1998 fum
+
+3.
+tar -xf ~djv/house.txz
+Huff and puff
+
+4.
+Hi there joe
+
+5.
+:us=\E[1m:tc=xterm:
+
+6.
+Stop is bounnd to: ^S, CTRL s
+stty stop ^Y

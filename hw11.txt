@@ -1,0 +1,63 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1.
+3Com Etherlink 3c501
+3Com Etherlink Plus (3c505)
+3c523 Etherlink/MC card (i82586 Ethernet chip)
+3Com Etherlink/MC32
+
+2. 
+DE203 Turbo (BNC)
+DE204 Turbo (TP)
+DE205 Turbo (TP BNC) 
+
+3. 
+18, 19, and 20 lines are ground
+
+4.
+Hostname command: hostname --fqdn
+Hostname: lab37.net.cecs.csulb.edu
+
+5.
+134.139.248.37
+
+6.
+134.139.248.63
+
+7.
+jaguar.net.cecs
+
+8.
+255.0.0.0
+
+9.
+root@lab37:~# arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+jaguar.net.cecs.csulb.e  ether   00:01:02:76:98:a8   C                     eth0
+lab36.net.cecs.csulb.ed  ether   00:22:4d:4c:7a:14   C                     eth0
+lab38.net.cecs.csulb.ed  ether   00:22:4d:4c:79:45   C                     eth0
+
+10.
+The machine uses the /etc/hosts file first, and the DNS second
+
+11.
+134.139.248.17
+
+12.
+The machines that can be accessed by shorthands are
+myself, localhost, 127.0.0.1
+lab34, lab34.net.cecs.csulb.edu, 134.139.248.34
+
+13.
+jaguar.net.cecs.csulb.edu, cheetah.cecs.csuld.edu
+
+14.
+134.139.248.64  jaguar.net.cecs 255.255.255.224
+
+15. 
+134.139.248.0, 134.139.248.127
+
+16.
+134.139.248.128, 134.139.248.255
