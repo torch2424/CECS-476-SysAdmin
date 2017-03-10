@@ -1,0 +1,65 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1.
+Commands to set up and test network:
+
+hostname lab37.net.cecs.csulb.edu
+hostname puma
+ifconfig log 127.0.0.1
+ifconfig eth0 134.139.248.37 netmask 255.255.255.224
+route add default gw 134.139.248.33
+ping 127.0.0.1
+ping 134.139.248.65
+ping 134.139.248.33
+ping 134.139.248.17
+
+2. 
+Add "ics.uci.edu" to /etc/resolve.conf
+
+3. 
+I commented out the telnet line:
+
+# telnet        stream  tcp     nowait  root    /usr/sbin/tcpd  in.telnetd
+
+4.
+in /etc/hosts.deny:
+
+in.telnet.d: panther
+
+5. 
+portmapper
+status
+ypbind
+rquotad
+nfs
+nlockmgr
+mountd
+
+6.
+
+I place a .rhosts file in /home/bob on lab37, 
+
+I placed "cheetah.cecs.csulb.edu  csa476x1" into the file,
+and then user rlogin lab37 -l bob to login as bob on lab37
+
+7. 
+
+I edited /etc/hosts.equiv on lab37,
+  
+I placed "cougar.cecs.csulb.edu" into the file,
+and then user rlogin lab37 -l bob to login as bob on lab37 from cougar
+
+8. 
+
+These are the steps:
+
+# Generate the keys
+ssh-keygen -t rsa
+
+# Copy to bob's home directory under .ssh
+cat ~/.ssh/id_rsa.pub | ssh bob@lab37 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+
+# Prepend a from to the authorized key
+from="panther.net.cecs.csulb.edu"
