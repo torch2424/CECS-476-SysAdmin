@@ -1,0 +1,55 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. 
+
+Directories Exported: 
+/load
+/sdb/slack13.37-64/slackware64
+/sdb/slack13.37/slackware
+/sdb/slack14.0-64/slackware64
+
+It exports to the machine: 134.139.0.0/255.255.0.0
+
+The options are: ro,sync,no_subtree_check
+
+English Description: The directories are exported to all machines of 134.139, as the 255.255.0.0 mask will not change the 134.139
+
+2.
+
+134.139.248.17:/u3 /net/cheetah/u3 nfs soft,bg,nolock 0 0
+134.139.248.17:/u4 /net/cheetah/u4 nfs soft,bg,nolock 0 0
+
+3. 
+
+Nfs directories mounted by cheetah are /u3 and /u4
+
+The file used to mount aardvark(~volper) is:
+/etc/auto.aardvark
+The options are:
+-soft,intr,nsfvers=2
+
+The file used to mount /net/lab is:
+/etc/auto.lab
+The options for my labmachine are:
+soft,intr
+
+4. 
+
+The file I changed was /etc/fstab, and the line I added was:
+134.139.248.33:/net/jaguar/sdb/slack13.37-64/slackware64 /mnt  nfs soft,bg,nolock 0 0
+
+5.
+
+I changed the file /etc/exports on my machine, and added the line:
+/etc cheetah.net.cecs.csulb.edu(ro,sync,no_subtree_check)
+
+[df freezes from the amount directories being mounted/unmounted by the class]
+
+6. 
+
+The line I added to auto.master is:
+/opt /etc/auto.jaguar
+The line I added to auto.jaguar is:
+load -soft,intr,nsfvers=2 jaguar.net.cecs.csulb.edu:/load

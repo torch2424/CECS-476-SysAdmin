@@ -1,0 +1,50 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. 
+
+cecsnet
+Used the command: nisdomainname
+
+2. 
+
+cheetah.cecs.csulb.edu
+Used the comman: cat /etc/yp.conf
+and then: nslookup 134.139.248.17
+
+3.
+
+48
+Used the command: ypcat passwd | wc -l
+
+4. 
+
+csa476x1:$1$d780KXQu$IG8hrK/Sbu6CRLblUaM5y0:20024:40:student:/net/cheetah/u3/c/csa476/x1:/bin/bash
+Used the command: ypmatch csa476x1 passwd
+
+5. 
+
+The contents of the bindings directory is dependent upon the user domain
+
+6. 
+
+ypserver 134.139.248.17
+ 
+7.
+
+If there is a /var/yp directory, 
+then the program located at /usr/sbin/ypbind is run.
+
+8.
+
+Yes, it is set up for passwrods, as it contains the uncommented line of: 
+passwd:         files nis
+
+9. 
+
+There are 3 groups for cslabd: panther, puma, lynx
+
+10. 
+
+
