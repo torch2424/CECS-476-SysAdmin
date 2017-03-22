@@ -1,0 +1,57 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1.
+
+in ftp users, comments the ftp user to enable anonymous user.
+
+
+2.
+
+The ftp command I used was: ftp> get ftpTestfile
+
+The response was:
+
+ftp> get ftpTestfile
+local: ftpTestfile remote: ftpTestfile
+200 PORT command successful
+150 Opening BINARY mode data connection for ftpTestfile (20 bytes)
+226 Transfer complete
+20 bytes received in 0.0251 secs (0.78 Kbytes/sec)
+
+3. 
+
+I changed the DisplayLogin line in /etc/proftpd.conf to::
+
+DisplayLogin          ftpTestfile
+
+4. 
+
+Commands used to ftp as bob, and get the demo file:
+
+$ ftp lab37  
+ftp> ls
+ftp> get demo
+
+5. 
+
+I added the line "bob" to the /etc/ftpusers file
+
+6.
+
+I used the command: "sftp bob@lab37:demo", to download the demo file from bob
+on my lab machine, from my csa account on cheetah
+
+7.
+
+The size of clogitA is: 9.0K
+the size of clogitB is: 848K
+
+from the ldd command: 
+clogitA includes the libraries:
+linux-vdso.so.1 =>  (0x00007fffbe2fa000)
+libc.so.6 => /lib64/libc.so.6 (0x00007f8c902e6000)
+/lib64/ld-linux-x86-64.so.2 (0x00007f8c906a3000)
+
+clogitB includes no dynamic libraries, as it is not a dynamic executable.

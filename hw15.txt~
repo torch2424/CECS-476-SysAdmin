@@ -1,0 +1,39 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1.
+
+in ftp users, comments the ftp user to enable anonymous user.
+
+
+2.
+
+The ftp command I used was: ftp> get ftpTestfile
+
+The response was:
+
+ftp> get ftpTestfile
+local: ftpTestfile remote: ftpTestfile
+200 PORT command successful
+150 Opening BINARY mode data connection for ftpTestfile (20 bytes)
+226 Transfer complete
+20 bytes received in 0.0251 secs (0.78 Kbytes/sec)
+
+3. 
+
+I changed the DisplayLogin line in /etc/proftpd.conf to::
+
+DisplayLogin          ftpTestfile
+
+4. 
+
+Commands used to ftp as bob, and get the demo file:
+
+$ ftp lab37  
+ftp> ls
+ftp> get demo
+
+5. 
+
+
