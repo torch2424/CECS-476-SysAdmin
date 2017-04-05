@@ -1,0 +1,49 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. 
+
+Copy Pasta-ing for the Exact `fdisk /dev/sda; p`
+
+Disk /dev/sda: 160.0 GB, 160041885696 bytes
+255 heads, 63 sectors/track, 19457 cylinders, total 312581808 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0xca18cb17
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1            2048    31258280    15628116+  82  Linux swap
+/dev/sda2        31258281   312581807   140661763+  83  Linux
+
+Start for /dev/sda1: 2048
+End for /dev/sda1: 31258280
+Partition type for /dev/sda1: Linux Swap
+
+Start for /dev/sda2: 31258281
+End for /dev/sda2: 312581807
+Partition Type for /dev/sda2: Linux
+
+2.
+
+ConsoleKit-0.4.3-x86_64-1
+M2Crypto-0.20.2-x86_64-1
+PyQt-4.8.1-x86_64-1
+QScintilla-2.4.5-x86_64-2
+a2ps-4.14-x86_64-5
+aaa_base-13.37-x86_64-3
+
+3.
+
+
+Etherboot allows the installation of slackware from a floppy disk over a network. Since, kernels became too large to fit on a floppy, etherboot contains the neccessary resources to simply get on networking, and then download the packages that were too large to fit on the install floppy.
+
+4.
+
+The name of the file being dowloaded at boot is: /tftpboot/pxelinux.0
+The host entry for my machine is: 134.139.248.37
+
+5. 
+
+
