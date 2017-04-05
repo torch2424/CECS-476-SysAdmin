@@ -1,0 +1,13 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+Assignment 7 report:
+
+csa476x1 at lab37 in ~
+$ df                                                                                  
+Filesystem         1K-blocks      Used Available Use% Mounted on
+/dev/root          138453016   3868508 127551420   3% /
+tmpfs                1001832         0   1001832   0% /dev/shm
+134.139.248.17:/u3 480720640  27225600 429075712   6% /net/cheetah/u3
+134.139.248.17:/u4 480720640 146953216 309348096  33% /net/cheetah/u4
