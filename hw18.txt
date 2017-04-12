@@ -1,0 +1,19 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. 
+
+mail.*  /var/log/maillog
+
+2. 
+
+mail.*  @jaguar.net.cecs.csulb.edu
+
+(Also, I had to restart syslogd)
+
+3. 
+
+psvr|lp:\
+        :lp=:rm=psvr.net.cecs.csulb.edu:\
+        :rp=psvr:sd=/var/spool/lpd:

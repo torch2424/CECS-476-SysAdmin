@@ -1,0 +1,44 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1.
+
+# routes incoming mail to appropriate mailboxes
+PATH=/usr/bin:/usr/local/bin
+MAILDIR=$HOME/.mailspool
+DEFAULT=$HOME/.mailspool/bobmail
+LOGFILE=/dev/null
+SHELL=/bin/sh
+
+# Put mail into another mailbox
+:0:
+* ^Subject.*Late
+latestuff
+
+:0:
+* ^From.*csa476x1
+importantstuff
+
+:0 B
+* Bargain
+junkmail
+
+2.
+
+Ruleset 93
+
+3. 
+
+/usr/sbin/ipop3d
+
+4. 
+
+I added/uncommented the lines:
+
+define(`MAIL_HUB',`jaguar.net.cecs.csulb.edu')
+define(`SMART_HOST',`jaguar.net.cecs.csulb.edu')
+
+5.
+
+CLroot bob
