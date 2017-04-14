@@ -1,0 +1,57 @@
+Aaron Turner
+csa476x1
+lab37.net.cecs.csulb.edu
+
+1. 
+
+csa476x1  Thu Apr 13 17:50:59 2017
+csa476x1  Thu Apr 13 17:54:22 2017
+
+2.
+
+/bin/bash: ./clogit.sh: Permission denied
+
+3.
+
+variable:
+PORTTIME_CHECKS_ENAB
+
+file:
+/etc/porttime
+
+4.
+
+DEFAULT_HOME
+
+5.
+
+Su Syslogging was enabled by setting:
+
+SULOG_FILE      /var/log/sulog
+
+Su only from the wheel group is from setting:
+
+SU_WHEEL_ONLY   yes
+
+The /var/log/sulog file contained:
+
+SU 04/13 18:10 - /dev/pts/1 bob-root
+SU 04/13 18:10 + /dev/pts/1 bob-root
+
+6.
+
+The last 3 login attempts were:
+
+user: csa476e1   where from: 10.39.36.219  when: Thu Apr 13 17:22
+user: csa476e1   where from: 10.39.36.219  when: Thu Apr 13 17:22
+user: csa476f1   where from: 10.39.61.123  when: Thu Apr 13 17:20
+
+7. 
+
+iptables -A INPUT -p tcp --dport ssh -s panther.net.cecs.csulb.edu -j REJECT
+
+8. 
+
+$IPT -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+
